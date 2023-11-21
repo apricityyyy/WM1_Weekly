@@ -1,0 +1,198 @@
+body {
+    background-color: #bfe2e3;
+    font-family: 'Merriweather', serif;
+    width: 90%;
+    margin: auto;
+}
+
+hr {
+    border: 2px dotted teal;
+}
+
+img.myimage {
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 20px;
+}
+
+img.myimage:hover {
+    width: 13.5rem;
+    height: 13.5rem;
+}
+
+ol {
+    border-left: 5px solid teal;
+    background-color: #bfe2e3;
+}
+
+ul.projects,
+ul.honorsandawards,
+ul.networksandmemberships,
+ul.managementandleadership {
+    list-style-type: square;
+}
+
+li:hover {
+    font-size: 1.1em; /* You can adjust the multiplier as needed */
+}  
+
+.flex-containermain {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 28%;
+    /* 3:1 Aspect Ratio */
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+a:link {
+    color: #000000;
+}
+
+a:hover:not(:visited) {
+    color: lightgray;
+}
+
+a:visited {
+    color: #52314a;
+}
+
+a:active {
+    color: lightgray;
+}
+
+nav {
+    width: 100%;
+    background-color: teal;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+div.table {
+    margin-bottom: 10px;
+}
+
+.schedule {
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+}
+
+
+table.schedule th, td {
+    height: 40px;
+    text-align: center;    
+    border: 1px solid;
+}
+
+.schedule tr:hover {
+    background-color: teal;
+}
+
+input:not([type=submit], [type=image], [type=file]) {
+    border: 2px solid teal;
+    border-radius: 4px;
+}
+
+body.contactme>h1 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+input.fullname,
+input.email {
+    width: 100%;
+}
+
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+input:focus {
+    background-color: lightgray;
+}
+
+input.message {
+    width: 250px;
+    transition: width 0.4s ease-in-out;
+}
+
+input.message:focus {
+    width: 100%;
+}
+
+input[type=submit],
+input[type=reset] {
+    background-color: teal;
+    border: none;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: 'Merriweather', serif;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=image]:hover {
+    font-size: larger;
+}
+
+@media (max-width: 600px) {
+    input[type=submit] {
+        width: 20%;
+        margin-top: 0;
+    }
+
+    body {
+        font-size: 0.5em;
+    }
+}
+
+img.gallery {
+    border: 5px solid teal;
+    height: auto;
+    border-radius: 50px;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 27rem;
+    margin-top: 100px;
+}
+
+img.gallery:hover {
+    width: 28rem;
+    height: auto;
+}
