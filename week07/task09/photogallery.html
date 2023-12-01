@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Photo Gallery</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+    <meta name="Photo Gallery" content="Some of the memorable photos of me">
+    <meta charset="UTF8">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Merriweather&family=Playfair+Display&family=Poiret+One&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="photogallery">
+    <nav>
+        <ul class="links">
+            <li><a href="https://www.linkedin.com/in/ilhamanovruzova/" target="_blank"><b>LinkedIn</b></a></li>
+            <li><a href="https://github.com/apricityyyy" target="_blank"><b>GitHub</b></a></li>
+            <li><a href="https://bit.ly/3sfBDoN" target="_blank"><b>Facebook</b></a></li>
+            <!-- <li><a href="../public/contactme.html" target="_blank"><b>Contact me now!</b></a></li>
+            <li><a href="../public/questionnaire.html" target="_blank"><b>Questionnaire</b></a></li>
+            <li><a href="../public/photogallery.html" target="_blank"><b>Photo Gallery</b></a></li>
+            <li><a href="../public/personaldigitcard.html" target="_blank"><b>Personal Digital Card</b></a></li> -->
+            <li><a href="https://apricityyyy.github.io/IN/" target=_blank><b>GitHub Page</b></a></li>
+        </ul>
+    </nav>
+
+    <img class="gallery" id="currentImage" alt="Current Image" />
+
+    <div class="buttons">
+        <button onclick=selectPrevImage() id="prevButton">Prev</button>
+        <button onclick=selectNextImage() id="nextButton">Next</button>
+    </div>
+
+    <script>
+        const array = [
+            "./assets/images/4.jpg",
+            "./assets/images/3.jpg",
+            "./assets/images/2.jpg",
+            "./assets/images/1.jpg",
+        ];
+
+        let currentIndex = 0;
+
+        function selectNextImage() {
+            currentIndex++;
+            displayImage();
+        }
+
+        function selectPrevImage() {
+            currentIndex--;
+            displayImage();
+        }
+
+        function displayImage() {
+            let imgElement = document.getElementById("currentImage");
+            imgElement.setAttribute('src', array[currentIndex]);
+
+            // Disable/Enable Prev and Next buttons based on currentIndex
+            const prevButton = document.getElementById("prevButton");
+            const nextButton = document.getElementById("nextButton");
+
+            prevButton.disabled = currentIndex === 0;
+            nextButton.disabled = currentIndex === array.length - 1;
+
+            // Add/remove the blurred class based on the button's disabled state
+            if (prevButton.disabled) {
+                prevButton.classList.add("blurred");
+            } else {
+                prevButton.classList.remove("blurred");
+            }
+
+            if (nextButton.disabled) {
+                nextButton.classList.add("blurred");
+            } else {
+                nextButton.classList.remove("blurred");
+            }
+        }
+
+        // Display the initial image
+        displayImage();
+    </script>
+        
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
