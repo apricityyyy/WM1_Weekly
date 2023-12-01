@@ -1,0 +1,120 @@
+body {
+    background: url(../images/background-image.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    width: 500px;
+    height: 570px;
+}
+
+#card {
+    background-color: white;
+    background: url("http://wp1.themexlab.com/wp/cards/wp-content/themes/cards/img/bg-card2.png") repeat-x right top #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+#myimage {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 6px solid #ddd;
+}
+
+div {
+    display: block;
+}
+
+.title h1 {
+    font-size: 30px !important;
+    margin: 10px 0;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#name {
+    color: teal;
+}
+
+.title h2 {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.hr1 {
+    border: none;
+    height: 1px;
+    width: 100%;
+    background: url(http://wp1.themexlab.com/wp/cards/wp-content/themes/cards/img/hr1.png) no-repeat center center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.card-main {
+    padding: 0 2.3rem;
+}
+
+.card-main p {
+    font-size: 13px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#information-button {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    background: url(http://wp1.themexlab.com/wp/cards/wp-content/themes/cards/img/bg-btn.png) no-repeat center center #08aeac;
+}
+
+div {
+    display: block;
+}
+
+#icons img {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+}

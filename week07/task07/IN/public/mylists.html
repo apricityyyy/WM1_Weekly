@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY LISTS</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+    <nav>
+        <ul class="links">
+            <li><a href="https://www.linkedin.com/in/ilhamanovruzova/" target="_blank"><b>LinkedIn</b></a></li>
+            <li><a href="https://github.com/apricityyyy" target="_blank"><b>GitHub</b></a></li>
+            <li><a href="https://bit.ly/3sfBDoN" target="_blank"><b>Facebook</b></a></li>
+            <li><a href="../public/contactme.html" target="_blank"><b>Contact me now!</b></a></li>
+            <li><a href="../public/questionnaire.html" target="_blank"><b>Questionnaire</b></a></li>
+            <li><a href="../public/photogallery.html" target="_blank"><b>Photo Gallery</b></a></li>
+            <li><a href="../public/personaldigitcard.html" target="_blank"><b>Personal Digital Card</b></a></li>
+            <li><a href="https://apricityyyy.github.io/IN/" target=_blank><b>GitHub Page</b></a></li>
+        </ul>
+    </nav>
+    
+    <h2 style="text-align: center; margin-top: 90px;">MY LISTS</h2>
+    <hr />
+
+    <button class="add" onclick="addDrink()">Add Drink</button> <br /> <br />
+    <div style="display: none;" id="inputsDrink">
+        <input type="text" id="drinkInput" />
+    </div>
+
+
+    <ul id="drinks"></ul>
+
+    <button class="add" onclick="addActionPlan()">Add Action Plan</button> <br /> <br />
+    <div style="display: none;" id="inputsActionPlan">
+        <input type="text" id="actionInput" />
+    </div>
+
+    <ul id="actions"></ul>
+
+    <script>
+        function addDrink() {
+            const drinkList = document.getElementById("drinks");
+            const inputSection = document.getElementById("inputsDrink");
+            inputSection.style = "display: block";
+            const inputValue = document.getElementById("drinkInput").value;
+            const title = document.getElementById("listTitle");
+
+            if (inputValue) {
+                if (title == null) {
+                    console.log("I am here");
+                    anotherTitle = document.createElement("h2");
+                    anotherTitle.id = "listTitle";
+                    anotherTitle.textContent = "DRINKS"
+                    drinkList.appendChild(anotherTitle);
+                }
+
+                const li = document.createElement("li");
+                li.textContent = inputValue;
+                li.onclick = removeItem;
+                drinkList.appendChild(li);
+            }
+        }
+
+        function addActionPlan() {
+            const drinkList = document.getElementById("actions");
+            const inputSection = document.getElementById("inputsActionPlan");
+            inputSection.style = "display: block";
+            const inputValue = document.getElementById("actionInput").value;
+            const title = document.getElementById("listTitleAction");
+
+            if (inputValue) {
+                if (title == null) {
+                    console.log("I am here");
+                    anotherTitle = document.createElement("h2");
+                    anotherTitle.id = "listTitleAction";
+                    anotherTitle.textContent = "ACTION PLAN"
+                    drinkList.appendChild(anotherTitle);
+                }
+
+                const li = document.createElement("li");
+                li.textContent = inputValue;
+                drinkList.appendChild(li);
+            }
+        }
+
+        function removeItem() {
+            if (this.parentElement.id === "inputsDrink") {
+                this.remove();
+            } else {
+                this.classList.toggle("strikethrough");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naming</title>
+</head>
+
+<body>
+    <label for="user_name">Enter your name:</label>
+    <input type="text" id="user_name" />
+    <p id="live_update">Your name is </p>
+
+    <script>
+        let nameEl = document.getElementById("user_name");
+        let parEl = document.getElementById("live_update");
+        nameEl.addEventListener('input', function () {
+            // Convert to uppercase
+            let uppercasedValue = nameEl.value.toUpperCase();
+
+            // Set the uppercase value in the paragraph
+            parEl.textContent = "Your name is " + uppercasedValue;
+
+            // Set the uppercase value in the input field
+            nameEl.value = uppercasedValue;
+        });
+    </script>
+</body>
+
+</html>

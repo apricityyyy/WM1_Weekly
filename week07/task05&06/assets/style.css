@@ -1,0 +1,53 @@
+.images {
+    margin: 3em;
+    padding: 2.5em;
+    width: 10em;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 100px;
+}
+
+#player1, #player2 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 10em;
+}
+
+#message {
+    position: absolute;
+    right: 10em;
+    top: 15em;
+    width: 500px;
+    height: 200px;
+    background-color: #fafafa;
+    border: dashed 3px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.message-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1200px) {
+    .images {
+        /* Adjust styles for smaller screens */
+        width: 5em;
+    }
+
+    #player1, #player2 {
+        /* Adjust styles for smaller screens */
+        margin-left: 5em;
+    }
+
+    #message {
+        /* Hide the message box on screens less than 500px */
+        display: none;
+    }
+}

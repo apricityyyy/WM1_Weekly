@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Questionnaire" content="Questionnaire for testing inputs">
+    <title>Questionnaire</title>
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Merriweather&family=Playfair+Display&family=Poiret+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul class="links">
+            <li><a href="https://www.linkedin.com/in/ilhamanovruzova/" target="_blank"><b>LinkedIn</b></a></li>
+            <li><a href="https://github.com/apricityyyy" target="_blank"><b>GitHub</b></a></li>
+            <li><a href="https://bit.ly/3sfBDoN" target="_blank"><b>Facebook</b></a></li>
+            <li><a href="../public/contactme.html" target="_blank"><b>Contact me now!</b></a></li>
+            <li><a href="../public/questionnaire.html" target="_blank"><b>Questionnaire</b></a></li>
+            <li><a href="../public/photogallery.html" target="_blank"><b>Photo Gallery</b></a></li>
+            <li><a href="../public/personaldigitcard.html" target="_blank"><b>Personal Digital Card</b></a></li>
+            <li><a href="https://apricityyyy.github.io/IN/" target=_blank><b>GitHub Page</b></a></li>
+        </ul>
+    </nav>
+
+    <br />
+    <h1 style="text-align: center; margin-top: 70px">Welcome to the form!</h1>
+
+    <form action="mailto:inovruzova16235@ada.edu.az" method="POST">
+
+        <input type="reset" value="Restart">
+        <hr />
+
+        <label for="fullname">Full name: </label>
+        <input placeholder="Enter your full name" type="text" id="fullname" name="fullname">
+        <hr />
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" min="1920-01-01" max="2023-01-01">
+        <hr />
+
+        <label for="email">New email address:</label>
+        <input placeholder="Create an email address" type="email" id="email" name="email">
+        <hr />
+
+        <label for="psw">New password: </label>
+        <input placeholder="Create a password" type="password" id="psw" name="password" />
+        <hr />
+
+        <input type="hidden" id="studentId" name="studentId" value="16235">
+        <hr />
+
+        <fieldset>
+            <legend>Choose your gender:</legend>
+            <input type="radio" id="female" name="gender" value="FEMALE" />
+            <label for="female"> Female </label> <br />
+            <input type="radio" id="male" name="gender" value="MALE" />
+            <label for="male"> Male </label> <br />
+            <input type="radio" id="other" name="gender" value="OTHER" />
+            <label for="other"> Other </label> <br />
+        </fieldset>
+
+        <hr />
+
+        <label for="myfile">Upload your resume:</label>
+        <input type="file" id="myfile" name="myfile" />
+
+        <hr />
+
+        <fieldset>
+            <legend>Choose the difficult courses for you:</legend>
+            <input type="checkbox" id="c1" name="difcourse" value="CALCULUS1" />
+            <label for="c1"> Calculus I </label> <br />
+            <input type="checkbox" id="pp1" name="difcourse" value="PP1" />
+            <label for="pp1"> Programming Principles I </label> <br />
+            <input type="checkbox" id="la" name="difcourse" value="LINEARALGEBRA" />
+            <label for="la"> Linear Algebra </label> <br />
+            <input type="checkbox" id="icn" name="difcourse" value="ICN" />
+            <label for="icn"> Intro to Computer Networks </label> <br />
+            <input type="checkbox" id="ds" name="difcourse" value="DISCRETESTRUCTURES" />
+            <label for="ds"> Discrete Structures </label> <br />
+        </fieldset>
+
+        <hr />
+
+        <label for="quantity">Difficulty level (between 1 and 5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+        <hr />
+
+        <label for="favcolor">Select your favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor">
+        <hr />
+
+        <input id="pfp" type="image" src="../assets/images/submit.png" alt="Submit" width="48" height="48" />
+
+    </form>
+
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>

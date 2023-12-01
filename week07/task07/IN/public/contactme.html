@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Contact Page" content="People will be able to send their direct message.">
+    <title>Contact Me</title>
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Merriweather&family=Playfair+Display&family=Poiret+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="contactme">
+    
+    <h1>Send a Direct Message</h1>
+
+    <form action="mailto:inovruzova16235@ada.edu.az" method="POST" enctype="text/plain">
+        <label for="fullname"><b>Full Name: </b></label><br />
+        <input class="fullname" type="text" placeholder="Enter your full name" id="fullname" name="fullname" /> <br />
+
+        <label for="email"><b>Email Address: </b></label><br />
+        <input class="email" type="email" placeholder="Enter your email address" id="email" name="email" required /> <br />
+
+        <label for="personalmessage"><b>Enter your message:</b></label><br />
+        <input class="message" class="message" placeholder="What would you like to address?" type="text" id="personalmessage"
+            name="message" required maxlength="1000" />
+        <br />
+
+        <input type="submit" value="Done!" />
+
+    </form>
+
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
