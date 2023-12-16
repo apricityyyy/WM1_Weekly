@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility</title>
+</head>
+
+<body>
+    <p class="Education">
+        I am a Junior Computer Science Student.
+        My interest areas are software engineering and artificial intelligence.
+    </p>
+    <p class="Learning">
+        I am improving my skills in back-end development, artificial intelligence,
+        communication, research paper writing, etc.
+    </p>
+    <button>Click me!</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $("button").click(function (event) {
+            $("button").html("Click again!");
+            if ($(".Education").css("visibility") == "hidden") {
+                $(".Education").css("visibility", "visible");
+            } else {
+                $(".Education").css("visibility", "hidden");
+            }
+        })
+    </script>
+</body>
+
+</html>
